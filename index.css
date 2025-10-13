@@ -32,6 +32,18 @@ div.card-header {
 	align-items: center;
 }
 
+#Span-1 {
+	font-weight: 600;
+	font-size: 3rem;
+	margin-right: 1rem;
+}
+
+#Span-2 {
+	font-weight: 600;
+	font-size: 3rem;
+	margin-left: 1rem;
+}
+
 p.card-text {
 	text-align: end;
 	font-weight: 500;
