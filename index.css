@@ -1,0 +1,59 @@
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 5rem 10rem;
+	font-family: "Lato", sans-serif;
+}
+
+div.card {
+	width: 40rem;
+	height: 50rem;
+	border-radius: 10px;
+
+}
+
+img {
+	border-radius: 10px;
+}
+
+div.card-header {
+	color: white;
+	background-color: black;
+	border-radius: 10px;
+}
+
+#Container {
+	font-weight: 600;
+	font-size: 3rem;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+p.card-text {
+	text-align: end;
+	font-weight: 500;
+	margin-right: 1rem;
+}
+
+select.form-select {
+	width: 20rem;
+	margin-left: 0.75rem;
+}
+
+label {
+	margin-left: 0.75rem;
+	margin-bottom: 0.5rem;
+}
+
+#Bottoms {
+	padding-right: 0;
+	padding-left: 1.5rem;
+	margin-top: 2rem;
+}
+
+button {
+	border-radius: 10px;
+}
