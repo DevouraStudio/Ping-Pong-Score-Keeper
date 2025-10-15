@@ -55,8 +55,10 @@ p.card-text {
 	justify-content: flex-start;
 	align-items: center;
 }
+
 select.form-select {
 	width: 20rem;
+	border-radius: 10px;
 }
 
 label {
@@ -69,12 +71,13 @@ label {
 
 #Bottoms {
 	display: flex;
-	justify-content:space-between;
+	justify-content: space-between;
 	align-items: center;
 	margin-top: 1rem;
 }
 
-#Button-1, #Button-2 {
+#Button-1,
+#Button-2 {
 	border-radius: 10px;
 	padding: 1rem 3rem;
 }
@@ -114,8 +117,9 @@ label {
 		align-items: center;
 	}
 
-	#Button-1, #Button-2 {
-		margin-bottom:2px;
+	#Button-1,
+	#Button-2 {
+		margin-bottom: 2px;
 	}
 
 	#Button-3 {
