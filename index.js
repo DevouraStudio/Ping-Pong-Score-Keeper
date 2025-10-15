@@ -7,37 +7,48 @@ const select = document.querySelector('select')
 let score = 0
 let score2 = 0
 let maxScore = parseInt(select.value)
+let gameOver = false
 buttonOne.addEventListener('click', function () {
 	maxScore = parseInt(select.value)
-	if (score < maxScore) {
+	if (!gameOver) {
 		score++
-		spanOne.textContent = score
+		if (score === maxScore) {
+			gameOver = true
+			buttonTwo.disabled = true
+			buttonOne.disabled = true
+			spanOne.style.color = 'green'
+			spanTwo.style.color = 'red'
+			console.log('Max Score Reached! Player One Won!')
+		}
 	}
-	else if (score === maxScore) {
-		buttonTwo.disabled = true
-		buttonOne.disabled = true
-		spanOne.style.color = 'green'
-		spanTwo.style.color = 'red'
-		console.log('Max Score Reached! Player One Won!')
-	}
-})
+	spanOne.textContent = score
+}
+)
+
+
+
 
 buttonTwo.addEventListener('click', function () {
 	maxScore = parseInt(select.value)
-	if (score2 < maxScore) {
+	if (!gameOver) {
 		score2++
-		spanTwo.textContent = score2
+		if (score2 === maxScore) {
+			gameOver = true
+			buttonTwo.disabled = true
+			buttonOne.disabled = true
+			spanOne.style.color = 'red'
+			spanTwo.style.color = 'green'
+			console.log('Max Score Reached! Player Two Won!')
+		}
 	}
-	else if (score2 === maxScore) {
-		buttonTwo.disabled = true
-		buttonOne.disabled = true
-		spanTwo.style.color = 'green'
-		spanOne.style.color = 'red'
-		console.log('Max Score Reached! Player Two Won!')
-	}
+	spanTwo.textContent = score2
 })
 
-buttonThree.addEventListener('click', function () {
+buttonThree.addEventListener('click', reset)
+
+select.addEventListener('change', reset)
+
+function reset() {
 	spanOne.style.color = 'black'
 	spanTwo.style.color = 'black'
 	buttonOne.disabled = false
@@ -46,4 +57,4 @@ buttonThree.addEventListener('click', function () {
 	score2 = 0
 	spanOne.textContent = score
 	spanTwo.textContent = score2
-})
+}
